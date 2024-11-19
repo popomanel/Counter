@@ -66,6 +66,10 @@ function Clock(countdown, callback) {
 
   var i = 0;
   function updateClock() {
+    const iframe= document.getElementById("contador");
+    console.log("l> iframe.contentWindow.document.body.scrollHeight")
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    
     timeinterval = requestAnimationFrame(updateClock);
     
     if (i++ % 10) { return; }
